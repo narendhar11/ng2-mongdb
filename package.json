@@ -1,0 +1,19 @@
+{
+  "name": "realestatewebsite",
+  "version": "1.0.0",
+  "description": "Real estate website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Narendhar",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "mongojs": "^2.4.1",
+    "mongoose": "^4.12.1",
+    "path": "^0.12.7",
+    "router": "^1.3.2"
+  }
+}
