@@ -8,16 +8,12 @@ var port = process.env.PORT || 3000;
 //app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-
-app.use('/node_modules',express.static(path.join(__dirname,'client/node_modules')) );
-app.use('/',express.static('client/dist'))
+app.use('/',express.static('client/dist'));
 
 // Parsers for POST data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Point static path to dist
-app.use(express.static(path.join(__dirname, 'dist')));
 
 
 var apiurl = require('./server/routers/api');
@@ -25,4 +21,4 @@ app.use('/api', apiurl);
 
 app.listen(port, function(){
     console.log('server is running on '+port+'....')
-})
+});
