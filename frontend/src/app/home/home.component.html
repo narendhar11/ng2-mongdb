@@ -1,0 +1,195 @@
+<section id='homepage-slider'>
+  <section class='slider-wrapper'>
+    <div class='homepage-slider hidden-phone'>
+      <img src="assets/images/photos/home.jpg" alt="" class='bg-image'/>
+    </div>
+  </section>
+</section>
+<section id='main' role='main'>
+    <section class='container'>
+        <section class='row tab-finder' style="width:89%;margin:0px auto">
+            <div class='span12'>
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active first-tab"><a href="#tab1" data-toggle="tab">Land</a></li>
+                        <li><a href="#tab2" data-toggle="tab">Farm House</a></li>
+                        <li><a href="#tab3" data-toggle="tab">Plots</a></li>
+                        <li><a href="#tab4" data-toggle="tab">Flats</a></li>
+                        <li><a href="#tab5" data-toggle="tab">Villa</a></li>
+                        <li class='last-tab'><a href="#tab6" data-toggle="tab">Independent houses</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <div class='inner'>
+                                <form>
+                                    
+                                    <select #location name='search-string' class='span2 search-string no-margin'>
+                                        <option *ngFor="let property of properties | unique" [value]="property.location">{{property.location}}</option>
+                                    </select>
+                                    
+                                    <input #minPrice type="text" name='search-min-price' class='span2 search-price no-margin' placeholder="Min. Price"/>
+                                   
+                                    <input #maxPrice type="text" name='search-max-price' class='span2 search-price' placeholder="Max. Price"/>
+                                    <button type="button" class='btn btn-primary search-property' (click)="gotoSearchList(location.value,minPrice.value,maxPrice.value)"><i class="icon-search icon-white"></i> Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <div class='inner'>
+                                <form action="#">
+                                    <select name='search-string' class='search-string'>
+                                        <option>Choose Location</option>
+                                        <option>Hyderabad</option>
+                                        <option>Secundrabad</option>
+                                    </select>
+                                    <input type="text" name='search-min-price' class='span2 search-price no-margin' placeholder="Min. Price"/>
+                                    
+                                    <input type="text" name='search-max-price' class='span2 search-price' placeholder="Max. Price"/>
+                                    <button type="submit" class='btn btn-primary search-property'><i class="icon-search icon-white"></i> Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                            <div class='inner'>
+                                <form action="#">
+                                    
+                                    <select name='search-string' class='search-string'>
+                                        <option>Choose Location</option>
+                                        <option>Hyderabad</option>
+                                        <option>Secundrabad</option>
+                                    </select>
+                                    <input type="text" name='search-min-price' class='span2 search-price no-margin' placeholder="Min. Price"/>
+                                    
+                                    <input type="text" name='search-max-price' class='span2 search-price' placeholder="Max. Price"/>
+                                    <button type="submit" class='btn btn-primary search-property'><i class="icon-search icon-white"></i> Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab4">
+                            <div class='inner'>
+                                <form action="#">
+                                        <select name='search-string' class='search-string'>
+                                            <option>Choose Location</option>
+                                            <option>Hyderabad</option>
+                                            <option>Secundrabad</option>
+                                        </select>
+                                    <input type="text" name='search-min-price' class='span2 search-price no-margin' placeholder="Min. Price"/>
+                                    <input type="text" name='search-max-price' class='span2 search-price' placeholder="Max. Price"/>
+                                    <button type="submit" class='btn btn-primary search-property'><i class="icon-search icon-white"></i> Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab5">
+                            <div class='inner'>
+                                <form action="#">
+                                    <select name='search-string' class='search-string'>
+                                        <option>Choose Location</option>
+                                        <option>Hyderabad</option>
+                                        <option>Secundrabad</option>
+                                    </select>
+                                    <input type="text" name='search-min-price' class='span2 search-price no-margin' placeholder="Min. Price"/>
+                                    
+                                    <input type="text" name='search-max-price' class='span2 search-price' placeholder="Max. Price"/>
+                                    <button type="submit" class='btn btn-primary search-property'><i class="icon-search icon-white"></i> Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab6">
+                            <div class='inner'>
+                                <form action="#">
+                                    <select name='search-string' class='search-string'>
+                                        <option>Choose Location</option>
+                                        <option>Hyderabad</option>
+                                        <option>Secundrabad</option>
+                                    </select>
+                                    <input type="text" name='search-min-price' class='span2 search-price no-margin' placeholder="Min. Price"/>
+                                 
+                                    <input type="text" name='search-max-price' class='span2 search-price' placeholder="Max. Price"/>
+                                    <button type="submit" class='btn btn-primary search-property'><i class="icon-search icon-white"></i> Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='row featured-items' style="margin-top: 200px">
+            <div class='span12'>
+                <h2>Featured Items</h2>
+                <div class='controls'>
+                    <a href="#" class='prev'>Previous</a>
+                    <a href="#" class='next'>Next</a>
+                </div>
+                <div class='featured-items-slider'>
+                    <ul class='slides'>
+                        <li>
+                            <div class='row'>
+                                <div class='span3 featured-item-wrapper' *ngFor="let property of properties | slice:0:4">
+                                    <div class='featured-item'>
+                                        <div class='top'>
+                                            <div class='inner-border'>
+                                                <div class='inner-padding'>
+                                                    <figure>
+                                                        <img src="assets/images/photos/{{property.imageurl}}" alt="" />
+                                                        <div class='banner'>{{property.ptype}}</div>
+                                                        <a [routerLink]="['/property', property.id]" class='figure-hover'>Zoom</a>
+                                                    </figure>
+                                                    <h3><a [routerLink]="['/property', property.id]">{{property.ptitle}}</a></h3>
+                                                    <p>{{property.location}}</p>
+                                                </div>
+                                            </div>
+                                            <i class='bubble'></i>
+                                        </div>
+                                        <div class='bottom'>
+                                            <div class='inner-border'>
+                                                <div class='inner-padding'>
+                                                    <p>{{property.bedrooms}} beds  +  {{property.bathrooms}} bath  +  {{property.yards}} sqft</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='price-wrapper'>
+                                        <div class='price'><i class="fa fa-inr" aria-hidden="true"></i>{{property.cost}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='row'>
+                                    <div class='span3 featured-item-wrapper' *ngFor="let property of properties | slice:4:8">
+                                            <div class='featured-item'>
+                                                <div class='top'>
+                                                    <div class='inner-border'>
+                                                        <div class='inner-padding'>
+                                                            <figure>
+                                                                <img src="assets/images/photos/{{property.imageurl}}" alt="" />
+                                                                <div class='banner'>{{property.ptype}}</div>
+                                                                <a [routerLink]="['/property', property.id]" class='figure-hover'>Zoom</a>
+                                                            </figure>
+                                                            <h3><a [routerLink]="['/property', property.id]">{{property.ptitle}}</a></h3>
+                                                            <p>{{property.location}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <i class='bubble'></i>
+                                                </div>
+                                                <div class='bottom'>
+                                                    <div class='inner-border'>
+                                                        <div class='inner-padding'>
+                                                            <p>{{property.bedrooms}} beds  +  {{property.bathrooms}} bath  +  {{property.yards}} sqft</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='price-wrapper'>
+                                                <div class='price'><i class="fa fa-inr" aria-hidden="true"></i>{{property.cost}}</div>
+                                            </div>
+                                        </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <i class='content-bubble'></i>
+        </section>
+    </section>
+</section>

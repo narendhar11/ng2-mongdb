@@ -1,0 +1,248 @@
+<section>
+<section id='page-title'>
+    <section class='container'>
+        <section class='row'>
+            <div class='span6'>
+                <h1>Property</h1>
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a> <span class="divider">&ndash;</span></li>
+                    <li><a href="#">Property</a> <span class="divider">&ndash;</span></li>
+                    <li class="active">{{property.ptype}}</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+</section>
+<section id='content' class='alternate-bg'>
+    <section class='container'>
+        <section class='row featured-items'>
+            <section class='span9'>
+                <div class='property-box'>
+                    <div class='top'>
+                        <div class='row'>
+                            <div class='left'>
+                                <figure>
+                                    <a rel="prettyPhoto[gallery]" href="assets/images/photos/4834194361_85d5c4a5e0_b.jpg">
+                                        <img src="assets/images/photos/{{property.imageurl}}" alt="" />
+                                    </a>
+                                    <div class='banner'>{{property.ptype}}</div>
+                                </figure>
+                                <div class='title-line'>
+                                    <div class='pull-left'>
+                                        <h2>{{property.ptitle}}</h2> <br />
+                                        <p>{{property.location}}</p>
+                                    </div>
+                                    <div class='pull-right'>
+                                        <span class='price'>{{property.cost}}</span>
+                                    </div>
+                                </div>
+                                <div class='description'>
+                                    <p>{{property.pdescription}}</p>
+                                </div>
+                                <table class='table table-hover table-bordered'>
+                                    <tr>
+                                        <td>Bedrooms</td>
+                                        <td>{{property.bedrooms}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bathrooms</td>
+                                        <td>{{property.bathrooms}}</td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td>Garage</td>
+                                        <td>Yes</td>
+                                    </tr> -->
+                                    <tr>
+                                        <td>Sqft</td>
+                                        <td>{{property.yards}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type</td>
+                                        <td>{{property.ptype}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class='right'>
+                                <h3>Gallery <span>(17 photos)</span></h3>
+                                <div class='gallery'>
+                                    <div class='line'>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="assets/images/photos/4834197589_84d75a42bd_b.jpg"><img src="assets/images/photos/4834197589_84d75a42bd_b.jpg" alt="" /></a>
+                                        </figure>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="assets/images/photos/4834201025_e7f66118eb_b.jpg">
+                                                <img src="assets/images/photos/4834201025_e7f66118eb_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class='line'>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="assets/images/photos/4834203945_3e56a09048_b.jpg">
+                                                <img src="assets/images/photos/4834203945_3e56a09048_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="assets/images/photos/4834790926_0228ed6cde_b.jpg">
+                                                <img src="assets/images/photos/4834790926_0228ed6cde_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class='line'>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="assets/images/photos/4834812234_3379989227_b.jpg">
+                                                <img src="assets/images/photos/4834812234_3379989227_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="assets/images/photos/4834826842_cdeb5bc8be_b.jpg">
+                                                <img src="assets/images/photos/4834826842_cdeb5bc8be_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class='line'>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="assets/images/photos/4947806065_f932310392_b.jpg">
+                                                <img src="assets/images/photos/4947806065_f932310392_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="assets/images/photos/5363528563_f6cb539049_b.jpg">
+                                                <img src="assets/images/photos/5363528563_f6cb539049_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <!-- <a rel="prettyPhoto[gallery]" class='more'>View all photos</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class='bottom'>
+                        <div class='inner'>
+                            <div class='row'>
+                                <div class='pull-left update-box'>
+                                    <p>Last update on <a href="#">04-17-2013</a> by <a href="#">Author</a>.</p>
+                                </div>
+                                <div class='pull-right'>
+                                    <p>Please <a href="#">login</a> to rate this item.</p>
+                                    <div class='star-rating'>
+                                        <button class='star blue'>1 Star</button>
+                                        <button class='star active'>2 Star</button>
+                                        <button class='star active'>3 Star</button>
+                                        <button class='star'>4 Star</button>
+                                        <button class='star'>5 Star</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <div class='author-section big-margins'>
+                    <div class='left'>
+                        <div class='inner'>
+                            <div class='row'>
+                                <figure>
+
+                                </figure>
+                                <div class='text'>
+                                    <h2>Martin J. Doe</h2> <br />
+                                    <span class='job-title'>Agent & Real Estate Specialist</span>
+                                    <p>In porttitor augue vel velit luctus at scelerisque nisi dictum. Ut tempus dignissim mi, at gravida leo porta ut.</p>
+                                    <a href="#" class='follow btn btn-primary'><i class='icon-white icon-plus'></i> Follow</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='right'>
+                        <div class='listings'>
+                            <span class='number'>25</span> <br />
+                            <span>listings</span>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+            <aside class='span3'>
+                <section class='widget'>
+                    <section class='widget-title uppercase'>
+                        <div class='inner'>
+                            <h2>Contact</h2>
+                        </div>
+                    </section>
+                    <section class='widget-content'>
+                        <form action="#">
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" name='firstname' id='firstname' class='input-block-level'/>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="lastname">Last Name</label>
+                                    <input type="text" name='lastname' id='lastname' class='input-block-level'/>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="email">Last Name</label>
+                                    <input type="email" name='email' id='email' class='input-block-level'/>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="mobile">Mobile</label>
+                                    <input type="text" name='mobile' id='mobile' class='input-block-level'/>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="message">Message</label>
+                                    <textarea type="text" name='message' id='message' class='input-block-level'></textarea>                                        </div>
+                            </div>
+                            <!-- <div class='widget-section second-half'>
+                                <div class='inner'>
+                                    <label for="maxPrice">Max. Price</label>
+                                    <select name="propertyType" id="maxPrice" class='btn-block selectpicker'>
+                                        <option value="all">$999K</option>
+                                        <option value="all">$899K</option>
+                                        <option value="all">$799K</option>
+                                    </select>
+                                </div>
+                            </div> -->
+                            <!-- <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="bedrooms">Bedrooms</label>
+                                    <select name="propertyType" id="bedrooms" class='btn-block selectpicker'>
+                                        <option value="all">3</option>
+                                        <option value="all">2</option>
+                                        <option value="all">4</option>
+                                        <option value="all">5</option>
+                                    </select>
+                                </div>
+                            </div> -->
+                            <!-- <div class='widget-section'>
+                                <div class='inner' style='position: relative;'>
+                                    <label for="size">Size</label>
+                                    <input type="text" name='size' id='size' class='input-block-level' value='500'/>
+                                    <span class='measure-type'>sqft</span>
+                                </div>
+                            </div> -->
+                            <!-- <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for='range'>Slide Example</label>
+                                    <input type="text" name='size' id='range' class='input-block-level range-example'/>
+                                </div>
+                            </div> -->
+                            <section class='widget-buttons'>
+                                <div class='inner'>
+                                    <!-- <a href="#" class='more-options'>More Options</a> <br /> -->
+                                    <a href='#' class='btn btn-primary btn-large btn-block'>Request</a>
+                                </div>
+                            </section>
+                        </form>
+                    </section>
+                </section>
+            </aside>
+        </section>
+    </section>
+</section>
+</section>

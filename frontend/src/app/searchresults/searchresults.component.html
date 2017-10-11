@@ -1,0 +1,205 @@
+<section id='page-title'>
+    <section class='container'>
+        <section class='row'>
+            <div class='span6'>
+                <h1>Search Results</h1>
+                <p>In sit amet arcu quis dolor adipiscing laoreet sed sit amet arcu. Proin non adipiscing felis.</p>
+            </div>
+        </section>
+    </section>
+</section>
+<section id='content'>
+    <section class='container'>
+        <section class='row featured-items'>
+            <section class='span12'>
+            <div class='row'>
+                <div class='span12'>
+                    <div class='top-bar'>
+                        <div class='bar-title'>
+                            <div class='inner'>
+                                <div class='pull-left custom-margin'>
+                                    <strong>1</strong> - <strong>{{totalresults}}</strong> of <strong>{{location}}</strong> results for <strong></strong> property <strong>For Sell</strong>
+                                </div>
+                                <!-- <div class='pull-right results-per-page custom-margin'>
+                                    <span class='text-line'>Results per page:</span>
+                                    <ul>
+                                        <li class='active'><a href="#">12</a></li>
+                                        <li>|</li>
+                                        <li><a href="#">24</a></li>
+                                        <li>|</li>
+                                        <li><a href="#">36</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class='bar-bottom'>
+                            <div class='inner'>
+                                <div class='pull-left custom-margin'>
+                                    <span class='text-line'>Sort by:</span>
+                                    <select class='selectpicker'>
+                                        <option value="relevance">Relevance</option>
+                                        <option value="date">Date</option>
+                                    </select>
+                                </div>
+                                <!-- <div class='pull-right view-type custom-margin'>
+                                    <span class='text-line'>View:</span>
+                                    <ul>
+                                        <li class='active'><a href="search-grid.html" class='grid'>Grid</a></li>
+                                        <li><a href="search-list.html" class='list'>List</a></li>
+                                        <li class='last-element'><a href="search-location.html" class='location'>Location</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class='row'>
+                    <div class='span3 featured-item-wrapper'  *ngFor="let result of results;">
+                        <div class='featured-item'>
+                            <div class='top'>
+                                <div class='inner-border'>
+                                    <div class='inner-padding'>
+                                        <figure>
+                                            <img src="assets/images/photos/{{result.imageurl}}" alt="" />
+                                            <div class='banner'>For {{result.ptype}}</div>
+                                            <a [routerLink]="['/property', result.id]" class='figure-hover'>Zoom</a>
+                                        </figure>
+                                        <h3><a [routerLink]="['/property', result.id]">{{result.ptitle}}</a></h3>
+                                        <p>Hyderabad</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class='bottom'>
+                                <div class='inner-border'>
+                                    <div class='inner-padding'>
+                                        <p>{{result.bedrooms}} beds  +  {{result.bathrooms}} baths  +  {{result.yards}} sqft</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class='star-rating'>
+                            <button class='star active'>1 Star</button>
+                            <button class='star active'>2 Star</button>
+                            <button class='star active'>3 Star</button>
+                            <button class='star active'>4 Star</button>
+                            <button class='star active'>5 Star</button>
+                        </div> -->
+                        <div class='price-wrapper'>
+                            <div class='price'><i class="fa fa-inr" aria-hidden="true"></i>{{result.cost}}</div>
+                            <!-- <div class='rate'>/month</div> -->
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                    
+                <div class="pagination">
+                    <ul>
+                        <li class='first-element'><a href="#">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li class='last-element'><a href="#">Next</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- <aside class='span3'>
+                <section class='widget'>
+                    <section class='widget-title uppercase'>
+                        <div class='inner'>
+                            <h2>Refine Search</h2>
+                        </div>
+                    </section>
+                    <section class='widget-content'>
+                        <form action="#">
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="location">Location</label>
+                                    <input type="text" name='location' id='location' class='input-block-level' value='Oxford'/>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="propertyType">Property Type</label>
+                                    <select name="propertyType" id="propertyType" class='btn-block selectpicker'>
+                                        <option value="all">All</option>
+                                        <option value="all">Mansion</option>
+                                        <option value="all">Apartment</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="category">Category</label>
+                                    <select name="propertyType" id="category" class='btn-block selectpicker'>
+                                        <option value="all">For Sale</option>
+                                        <option value="all">For Rent</option>
+                                        <option value="all">Forclosures</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class='widget-section first-half'>
+                                <div class='inner'>
+                                    <label for="minPrice">Min. Price</label>
+                                    <select name="propertyType" id="minPrice" class='btn-block selectpicker'>
+                                        <option value="all">$17K</option>
+                                        <option value="all">$27K</option>
+                                        <option value="all">$37K</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class='widget-section second-half'>
+                                <div class='inner'>
+                                    <label for="maxPrice">Max. Price</label>
+                                    <select name="propertyType" id="maxPrice" class='btn-block selectpicker'>
+                                        <option value="all">$999K</option>
+                                        <option value="all">$899K</option>
+                                        <option value="all">$799K</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="bedrooms">Bedrooms</label>
+                                    <select name="propertyType" id="bedrooms" class='btn-block selectpicker'>
+                                        <option value="all">3</option>
+                                        <option value="all">2</option>
+                                        <option value="all">4</option>
+                                        <option value="all">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner' style='position: relative;'>
+                                    <label for="size">Size</label>
+                                    <input type="text" name='size' id='size' class='input-block-level' value='500'/>
+                                    <span class='measure-type'>sqft</span>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for='range'>Slide Example</label>
+                                    <input type="text" name='size' id='range' class='input-block-level range-example'/>
+                                </div>
+                            </div>
+                            <section class='widget-buttons'>
+                                <div class='inner'>
+                                    <a href="#" class='more-options'>More Options</a> <br />
+                                    <a href='#' class='btn btn-primary btn-large btn-block'>Update</a>
+                                </div>
+                            </section>
+                        </form>
+                    </section>
+                </section>
+                <a href="#" id='clearFilters'>Clear all filters</a>
+            </aside> -->
+        </section>
+    </section>
+</section>

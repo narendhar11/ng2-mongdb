@@ -8,7 +8,7 @@ var port = process.env.PORT || 3000;
 //app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-app.use('/',express.static('client/dist'));
+app.use('/',express.static('frontend/dist'));
 
 // Parsers for POST data
 app.use(bodyParser.json());

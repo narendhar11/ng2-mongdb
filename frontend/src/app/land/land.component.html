@@ -1,0 +1,87 @@
+<section id='page-title'>
+  <section class='container'>
+      <section class='row'>
+          <div class='span6'>
+              <h1>Land</h1>
+              <ul class="breadcrumb">
+                  <li><a href="#">Home</a> <span class="divider">&ndash;</span></li>
+                  <li><a href="#">Buy</a> <span class="divider">&ndash;</span></li>
+                  <li class="active">Land</li>
+              </ul>
+          </div>
+      </section>
+  </section>
+</section>
+<section id='content'>
+  <section class='container'>
+      <section class='row featured-items'>
+          <section class='span12'>
+          <div class='row'>
+              <div class='span12'>
+                  <div class='top-bar'>
+                      <div class='bar-title'>
+                          <div class='inner'>
+                              <div class='pull-left custom-margin'>
+                                  <strong>1</strong> - <strong>12</strong> of <strong>{{landResults}}</strong> results <strong>For Land</strong>
+                              </div>
+                          </div>
+                      </div>
+                      <div class='bar-bottom'>
+                          <div class='inner'>
+                              <div class='pull-left custom-margin'>
+                                  <span class='text-line'>Sort by:</span>
+                                  <select class='selectpicker'>
+                                      <option value="relevance">Relevance</option>
+                                      <option value="date">Date</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              <div class='row'>
+                  <div class='span3 featured-item-wrapper' *ngFor="let landproperty of landproperties;">
+                      <div class='featured-item'>
+                          <div class='top'>
+                              <div class='inner-border'>
+                                  <div class='inner-padding'>
+                                      <figure>
+                                          <img src="assets/images/photos/{{landproperty.imageurl}}" alt="" />
+                                          <div class='banner'>For {{landproperty.ptype}}</div>
+                                          <a [routerLink]="['/property', landproperty.id]" class='figure-hover'>Zoom</a>
+                                      </figure>
+                                      <h3><a [routerLink]="['/property', landproperty.id]">{{landproperty.ptitle}}</a></h3>
+                                      <p>{{landproperty.location}}</p>
+                                  </div>
+                              </div>                              
+                          </div>
+                          <div class='bottom'>
+                              <div class='inner-border'>
+                                  <div class='inner-padding'>
+                                      <p>{{landproperty.bedrooms}} beds  +  {{landproperty.bathrooms}} baths  +  {{landproperty.yards}} sqft</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class='price-wrapper'>
+                          <div class='price'><i class="fa fa-inr" aria-hidden="true"></i>{{landproperty.cost}}</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="pagination">
+                  <ul>
+                      <li class='first-element'><a href="#">Prev</a></li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">...</a></li>
+                      <li><a href="#">9</a></li>
+                      <li><a href="#">10</a></li>
+                      <li class='last-element'><a href="#">Next</a></li>
+                  </ul>
+              </div>
+            </section>
+      </section>
+  </section>
+</section>
